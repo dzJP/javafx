@@ -6,4 +6,6 @@ module se.iths.jp.javafxjp {
 
     opens se.iths.jp.javafxjp to javafx.fxml;
     exports se.iths.jp.javafxjp;
+    exports se.iths.jp.javafxjp.model;
+    opens se.iths.jp.javafxjp.model to javafx.fxml;
 }
