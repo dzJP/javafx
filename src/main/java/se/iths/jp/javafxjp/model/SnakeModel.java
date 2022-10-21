@@ -38,6 +38,8 @@ public class SnakeModel {
         }
 
         // Todo: If not eating an apple, remove last segment from list
+        // Todo: If coliding with walls. Game Over. Stop update.
+        // Todo: Colliding with self. Game over.
     }
 
     public void setUp() {
