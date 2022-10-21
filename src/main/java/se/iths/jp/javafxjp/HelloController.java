@@ -1,5 +1,6 @@
 package se.iths.jp.javafxjp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +11,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 
 public class HelloController {
+    
 
     HelloModel helloModel = new HelloModel();
     @FXML
@@ -21,13 +23,22 @@ public class HelloController {
 
     @FXML
     protected void initialize() {
-        textField1.textProperty().bindBidirectional(helloModel.textProperty());
-        welcomeText.textProperty().bind(helloModel.textProperty());
+        textField1.textProperty().bindBidirectional(helloModel.urlProperty());
+        welcomeText.textProperty().bind(helloModel.quoteProperty());
+
+//        System.out.println(Thread.currentThread().getName()); // only thread that can touch the graphic gränssnitt
     }
 
     @FXML
-    protected void onHelloButtonClick() {
-        helloModel.setText("");
+    protected void onHelloButtonClick() throws InterruptedException {
+//        new Thread(()-> {                     // kommer garanterat att köra något på fx tråden
+//            Platform.runLater(()->
+//            button1.setText("From thread"));
+//        }).start();
+
+//        new Thread(() -> button1.setText("From Thread")).start(); // this wont work
+
+        helloModel.loadNewQuote();
 
     }
 
