@@ -1,14 +1,10 @@
-package se.iths.jp.javafxjp;
+package se.iths.jp.javafxjp.hellomodel;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
 
 public class HelloController {
     

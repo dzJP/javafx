@@ -1,4 +1,4 @@
-package se.iths.jp.javafxjp;
+package se.iths.jp.javafxjp.hellomodel;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
